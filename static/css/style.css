@@ -18,9 +18,16 @@ body {
 
 }
 
+.second-header {
+    width: 100vw;
+
+    border-bottom: 2px solid #57c6e2;
+
+}
+
 li {
     display: list-item;
-    margin: 1rem 3rem;
+    margin: 0.25rem 3rem;
 
 }
 
@@ -33,6 +40,12 @@ li a {
 
 
 .main-header ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+.second-header ul {
     display: flex;
     list-style: none;
     justify-content: center;
@@ -70,26 +83,26 @@ form label {
     align-items: center;
     font-size: 20px;
     color: #6a88aa;
-    width: 20vw;
+    width: 25rem;
     font-weight: 600;
     margin: 0.7rem 0;
 
 }
 
 form input[type="text"] {
-    width: 10vw;
-    height: 2vw;
+    width: 15rem;
+    height: 2.5rem;
 }
 
 
 form input[type="password"] {
-    width: 10vw;
-    height: 2vw;
+    width: 15rem;
+    height: 2.5rem;
 }
 
 form input[type="number"] {
-    width: 10vw;
-    height: 2vw;
+    width: 15rem;
+    height: 2.5rem;
 }
 
 .gender {
@@ -98,7 +111,7 @@ form input[type="number"] {
 }
 
 .form-button {
-    height: 3vw;
+    height: 3rem;
     font-size: 20px;
     background-color: #C2ECFC;
     border-left: 20px double #57c6e2;
