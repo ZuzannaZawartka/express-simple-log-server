@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+
+}
+
+.main-header {
+    width: 100vw;
+
+    background-color: #57c6e2;
+
+}
+
+li {
+    display: list-item;
+    margin: 1rem 3rem;
+
+}
+
+li a {
+    font-size: 30px;
+
+    text-decoration: none;
+    color: #DCFAF9;
+}
+
+
+.main-header ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+.body-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+
+}
+
+.greyText {
+    color: #ADC1D9;
+    font-size: 5rem;
+}
+
+.description {
+    color: #ADC1D9;
+    font-size: 2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    display: flex;
+    justify-content: space-between;
+    letter-spacing: 1px;
+    align-items: center;
+    font-size: 20px;
+    color: #6a88aa;
+    width: 20vw;
+    font-weight: 600;
+    margin: 0.7rem 0;
+
+}
+
+form input[type="text"] {
+    width: 10vw;
+    height: 2vw;
+}
+
+
+form input[type="password"] {
+    width: 10vw;
+    height: 2vw;
+}
+
+form input[type="number"] {
+    width: 10vw;
+    height: 2vw;
+}
+
+.gender {
+    width: 10vw;
+    font-size: 15px;
+}
+
+.form-button {
+    height: 3vw;
+    font-size: 20px;
+    background-color: #C2ECFC;
+    border-left: 20px double #57c6e2;
+    border-right: 0px;
+    border-top: 0px;
+    border-bottom: 0px;
+    color: #57c6e2;
+}

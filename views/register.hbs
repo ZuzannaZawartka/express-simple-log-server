@@ -1,0 +1,26 @@
+<h1 class="greyText">register</h1>
+
+<form method="post" action="register">
+    <label>login :
+        <input name="login" type="text" required="yes" />
+    </label>
+    <label>password : <input name="password" type="password" required=yes /></label>
+    <label>age :
+        <input name="age" type="number" required="yes" />
+    </label>
+    <label>student :
+        <input type="checkbox" name="uczen">
+    </label>
+    <label>gender :
+        <div>
+            <label class="gender">female
+                <input type="radio" name="male" value="female">
+            </label>
+
+            <label class="gender">male
+                <input type="radio" name="male" value="male">
+            </label>
+        </div>
+    </label>
+    <button class="form-button" type="submit">register</button>
+</form>
