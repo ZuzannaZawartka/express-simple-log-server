@@ -44,7 +44,9 @@ app.get("/admin", function(req, res){
 });
 
 app.get("/show", function(req, res){
-
+    data.sort(function(a,b){
+        return parseFloat(a.id) - parseFloat(b.id)
+   });
     if(!islogged){
         res.render('admin.hbs')
     }else{
@@ -100,14 +102,15 @@ app.get("/logout", function(req, res){
 
 app.post("/register", function (req, res) { //formularz rejestracji
     
-        isNewLogin = true
+        isCorrect = true
         for(let i=0 ; i < data.length;i++){
-            if((req.body.login == data[i].login)){
-                isNewLogin = false  
+            if((req.body.login == data[i].login )){
+                isCorrect = false
+
             }
         }
     
-        if(isNewLogin){
+        if(isCorrect){
             res.send("Zarejestrowano pomyślnie")
             req.body["id"] = data.length
             data.push(req.body)
