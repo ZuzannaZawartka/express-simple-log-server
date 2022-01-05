@@ -1,0 +1,41 @@
+<form onchange="this.submit()" class="divsort" method="post" action="sort">
+    <label class="sort">
+        rosnąco
+        <input type="radio" name="sort" value="off">
+    </label>
+
+    <label class="sort">
+        malejąco
+        <input type="radio" name="sort" value="on">
+    </label>
+</form>
+<table>
+    {{#each dataSorted}}
+    <tr>
+        <td class="id-table">
+            id: {{id}}
+        </td>
+        <td>
+            login: {{login}}
+        </td>
+        <td>
+            password :{{password}}
+        </td>
+        <td>
+            age: {{age}}
+        </td>
+        <td>
+            student :
+            {{#if data.study}}{
+            <input type="checkbox" checked="true" disabled>
+            {{else}}
+            <input type="checkbox" disabled>
+            {{/if}}
+        </td>
+        <td>
+            gender : {{gender}}
+        </td>
+    </tr>
+
+    {{/each}}
+</table>

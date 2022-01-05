@@ -1,0 +1,30 @@
+<table>
+    {{#each data}}
+    <tr>
+        <td class="id-table">
+            id: {{id}}
+        </td>
+        <td>
+            login: {{login}}
+        </td>
+        <td>
+            password :{{password}}
+        </td>
+        <td>
+            age: {{age}}
+        </td>
+        <td>
+            student :
+            {{#if data.study}}{
+            <input type="checkbox" checked="true" disabled>
+            {{else}}
+            <input type="checkbox" disabled>
+            {{/if}}
+        </td>
+        <td>
+            gender : {{gender}}
+        </td>
+    </tr>
+
+    {{/each}}
+</table>

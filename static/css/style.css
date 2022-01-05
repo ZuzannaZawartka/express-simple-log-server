@@ -120,3 +120,41 @@ form input[type="number"] {
     border-bottom: 0px;
     color: #57c6e2;
 }
+
+table {
+    width: 100rem;
+}
+
+.id-table {
+    background-color: #71cde4;
+}
+
+tr {
+    height: 2rem;
+    background-color: #b8e2e2;
+
+}
+
+td {
+    padding-left: 1rem;
+    border: 1px solid rgb(154, 151, 158);
+}
+
+.sort {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .25rem;
+    margin: .5rem 0;
+
+
+}
+
+.divsort {
+    width: 100rem;
+    padding: 0.5rem;
+    float: left;
+    display: flex;
+    flex-direction: row;
+}
