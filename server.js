@@ -87,9 +87,6 @@ app.get("/sort", function(req, res){
       // app.engine('hbs', hbs({ defaultLayout: 'main3.hbs'}));
         res.render('sort.hbs', {dataSorted,layout:'main3.hbs'})
     }
-  
-
-  
 });
 
 
@@ -106,21 +103,17 @@ app.post("/register", function (req, res) { //formularz rejestracji
         for(let i=0 ; i < data.length;i++){
             if((req.body.login == data[i].login )){
                 isCorrect = false
-
             }
         }
-    
         if(isCorrect){
-            res.send("Zarejestrowano pomyślnie")
+            res.send(`Witaj ${req.body.login} ! Zarejestrowano pomyślnie`)
             req.body["id"] = data.length
             data.push(req.body)
             console.log(req.body)
         }else{
             
-              res.render('register.hbs'),{alert:"Taki login już istnieje !"};
+              res.render('register.hbs');
         }
-
-  
     })
 
     app.post("/loginf", function (req, res) { //formularz logowania
@@ -140,18 +133,18 @@ app.post("/register", function (req, res) { //formularz rejestracji
 
     app.post("/sort", function (req, res) { //sortowanie danych po zmianie radio
         let dataSorted = data 
+        let isASC = false
         if(req.body.sort == "on"){
+            isASC = true
             dataSorted.sort(function(a,b){
                 return parseFloat(b.age) - parseFloat(a.age)
-                
             });
          }else{
             dataSorted.sort(function(a,b){
                 return parseFloat(a.age) - parseFloat(b.age)
            });
          }
-         //app.engine('hbs', hbs({ defaultLayout: 'main3.hbs'}));
-         res.render('sort.hbs', {dataSorted,layout:'main3.hbs'})
+         res.render('sort.hbs', {isASC,dataSorted,layout:'main3.hbs'})
     })
 
 

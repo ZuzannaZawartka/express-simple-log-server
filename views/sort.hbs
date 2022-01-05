@@ -1,13 +1,24 @@
 <form onchange="this.submit()" class="divsort" method="post" action="sort">
+    {{#if isASC}}
     <label class="sort">
         rosnąco
         <input type="radio" name="sort" value="off">
     </label>
+    <label class="sort">
+        malejąco
+        <input type="radio" name="sort" value="on" checked>
+    </label>
 
+    {{else}}
+    <label class="sort">
+        rosnąco
+        <input type="radio" name="sort" value="off" checked>
+    </label>
     <label class="sort">
         malejąco
         <input type="radio" name="sort" value="on">
     </label>
+    {{/if}}
 </form>
 <table>
     {{#each dataSorted}}
