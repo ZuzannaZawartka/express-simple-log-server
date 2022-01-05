@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/ZuzannaZawartka/express-simple-log-server/issues"
   },
-  "homepage": "https://github.com/ZuzannaZawartka/express-simple-log-server#readme"
+  "homepage": "https://github.com/ZuzannaZawartka/express-simple-log-server#readme",
+  "dependencies": {
+    "express": "~4.16.1",
+    "express-handlebars": "^5.3.4"
+  }
 }
