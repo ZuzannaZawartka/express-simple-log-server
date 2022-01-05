@@ -17,19 +17,30 @@ app.use(express.urlencoded({
     }));
 
 app.get("/", function(req, res){
-    res.render('mainPage.hbs')
+
+    if(!islogged){
+        res.render('mainPage.hbs',{layout:'main.hbs'})
+    }else{
+        res.render('mainPage.hbs',{layout:'main2.hbs'})
+    }
 
 });
 
 app.get("/register", function(req, res){
          
-    res.render('register.hbs')
+    if(!islogged){
+        res.render('register.hbs',{layout:'main.hbs'})
+    }else{
+        res.render('register.hbs',{layout:'main2.hbs'})
+    }
          
 });
 app.get("/login", function(req, res){
-     
-    res.render('login.hbs')
-    
+    if(!islogged){
+        res.render('login.hbs',{layout:'main.hbs'})
+    }else{
+        res.render('login.hbs',{layout:'main2.hbs'})
+    }
 });
 
 app.get("/admin", function(req, res){
